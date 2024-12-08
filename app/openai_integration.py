@@ -1,6 +1,7 @@
 import openai
 import os
 from dotenv import load_dotenv
+import json
 
 # Load environment variables
 load_dotenv()
@@ -28,6 +29,34 @@ def create_assistant():
     # Return the assistant's response
     return response['choices'][0]['message']['content']
 
+
+# Load the product catalog from the JSON file
+def load_catalog():
+    with open("app/products.json", "r") as f:
+        return json.load(f)
+
+# Get product details by name
+def getProductInfo(product_name):
+    catalog = load_catalog()
+    for product in catalog:
+        if product["name"].lower() == product_name.lower():
+            return product
+    return "Product not found."
+
+# Check product stock availability
+def checkStock(product_name):
+    catalog = load_catalog()
+    for product in catalog:
+        if product["name"].lower() == product_name.lower():
+            if product["stock"] > 0:
+                return f"{product_name} is available."
+            else:
+                return f"{product_name} is out of stock."
+    return "Product not found."
+
+
 # Test the function
 if __name__ == "__main__":
-    print(create_assistant())
+    print(load_catalog())
+    print(getProductInfo("Gaming Mouse"))
+    print(checkStock("Smart Watch"))
