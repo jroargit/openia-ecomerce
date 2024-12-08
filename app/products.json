@@ -1,0 +1,37 @@
+[
+    {
+        "product_id": 1,
+        "name": "EcoFriendly Water Bottle",
+        "description": "A reusable water bottle made from eco-friendly materials.",
+        "price": 19.99,
+        "stock": 50
+    },
+    {
+        "product_id": 2,
+        "name": "Wireless Headphones",
+        "description": "Noise-canceling over-ear headphones with Bluetooth connectivity.",
+        "price": 129.99,
+        "stock": 30
+    },
+    {
+        "product_id": 3,
+        "name": "Smart Watch",
+        "description": "A sleek smart watch with fitness tracking and notifications.",
+        "price": 99.99,
+        "stock": 15
+    },
+    {
+        "product_id": 4,
+        "name": "Laptop Sleeve",
+        "description": "Protect your laptop with this padded and stylish sleeve.",
+        "price": 29.99,
+        "stock": 100
+    },
+    {
+        "product_id": 5,
+        "name": "Gaming Mouse",
+        "description": "A high precision gaming mouse with customizable buttons.",
+        "price": 49.99,
+        "stock": 70
+    }
+]
